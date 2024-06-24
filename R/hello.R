@@ -34,39 +34,6 @@ hello <- function() {
 hello <- function() {
   print("Hello, world!")
 }
-#' Hitung Luas Persegi
-#'
-#' Fungsi untuk menghitung luas persegi.
-#'
-#' @param sisi Panjang sisi persegi.
-#' @return Luas persegi.
-#' @export
-luas_persegi <- function(sisi) {
-  return(sisi * sisi)
-}
-
-#' Hitung Keliling Persegi
-#'
-#' Fungsi untuk menghitung keliling persegi.
-#'
-#' @param sisi Panjang sisi persegi.
-#' @return Keliling persegi.
-#' @export
-keliling_persegi <- function(sisi) {
-  return(4 * sisi)
-}
-
-#' Hitung Luas Lingkaran
-#'
-#' Fungsi untuk menghitung luas lingkaran.
-#'
-#' @param jari_jari Jari-jari lingkaran.
-#' @return Luas lingkaran.
-#' @export
-luas_lingkaran <- function(jari_jari) {
-  return(pi * jari_jari * jari_jari)
-}
-
 #' Hitung Keliling Lingkaran
 #'
 #' Fungsi untuk menghitung keliling lingkaran.
@@ -77,6 +44,32 @@ luas_lingkaran <- function(jari_jari) {
 keliling_lingkaran <- function(jari_jari) {
   return(2 * pi * jari_jari)
 }
+
+#' Hitung Keliling Persegi Panjang
+#'
+#' Fungsi untuk menghitung keliling persegi panjang.
+#'
+#' @param panjang Panjang persegi panjang.
+#' @param lebar Lebar persegi panjang.
+#' @return Keliling persegi panjang.
+#' @export
+keliling_persegi_panjang <- function(panjang, lebar) {
+  return(2 * (panjang + lebar))
+}
+
+#' Hitung Keliling Segitiga
+#'
+#' Fungsi untuk menghitung keliling segitiga.
+#'
+#' @param sisi1 Panjang sisi pertama.
+#' @param sisi2 Panjang sisi kedua.
+#' @param sisi3 Panjang sisi ketiga.
+#' @return Keliling segitiga.
+#' @export
+keliling_segitiga <- function(sisi1, sisi2, sisi3) {
+  return(sisi1 + sisi2 + sisi3)
+}
+
 install.packages("devtools")
 install.packages("roxygen2")
 
@@ -85,6 +78,7 @@ library(roxygen2)
 roxygenize("path/to/bangunDatar")
 devtools::build("path/to/bangunDatar")
 install.packages("path/to/bangunDatar_0.1.0.tar.gz", repos = NULL, type = "source")
+install.packages(bangunDatar)
 library(bangunDatar)
 luas_persegi(4)
 keliling_persegi(4)
