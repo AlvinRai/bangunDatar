@@ -52,19 +52,6 @@ keliling_segitiga <- function(sisi1, sisi2, sisi3) {
   return(sisi1 + sisi2 + sisi3)
 }
 
-install.packages("devtools")
-install.packages("roxygen2")
 
-library(devtools)
-library(roxygen2)
-roxygenize("path/to/bangunDatar")
-devtools::build("path/to/bangunDatar")
-install.packages("path/to/bangunDatar_0.1.0.tar.gz", repos = NULL, type = "source")
-install.packages(bangunDatar)
-library(bangunDatar)
-luas_persegi(4)
-keliling_persegi(4)
-luas_lingkaran(3)
-keliling_lingkaran(3)
 
 
